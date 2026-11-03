@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing speed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title_website">
+            سنجنش سرعت تایپ
+        </h1>
+        <p class="Process_speed">
+            فرایند سرعت سنجش تایپ به این صورت است که شما به محض شروع به تایپ، تایمر شروع به کار می‌کند و تا زمان نوشتن متن الگو تایمر فعال می‌ماند
+        </p>
+    </header>
+    <main class="main">
+        <h3 class="lable_target">:متن الگو</h3>
+            <div class="box_target_text">
+                <p id="target_text"></p>
+            </div>
+        <textarea name="user_text" id="user_text" placeholder=".متن الگو را به صورت دقیق اینجا وارد کنید"></textarea>
+        <div class="tools">
+            <div class="buttens">
+                <button class="btn" id="reset">Reset</button>
+                <button class="btn" id="Next">Next</button> 
+            </div>
+            <div class="timer">
+                <p id="M">00</p> : <p id="S">00</p> . <p id="Ms">00</p>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="row">
+                <button data-name-btn="Backquote" class="btn-keyboard colah"><span>~</span><span>`</span></button>
+                <button data-name-btn="Digit1" class="btn-keyboard"><span>!</span><span>1</span></button>
+                <button data-name-btn="Digit2" class="btn-keyboard"><span>@</span><span>2</span></button>
+                <button data-name-btn="Digit3" class="btn-keyboard"><span>#</span><span>3</span></button>
+                <button data-name-btn="Digit4" class="btn-keyboard"><span>$</span><span>4</span></button>
+                <button data-name-btn="Digit5" class="btn-keyboard"><span>%</span><span>5</span></button>
+                <button data-name-btn="Digit6" class="btn-keyboard"><span>^</span><span>6</span></button>
+                <button data-name-btn="Digit7" class="btn-keyboard"><span>&</span><span>7</span></button>
+                <button data-name-btn="Digit8" class="btn-keyboard"><span>*</span><span>8</span></button>
+                <button data-name-btn="Digit9" class="btn-keyboard"><span>(</span><span>9</span></button>
+                <button data-name-btn="Digit0" class="btn-keyboard"><span>)</span><span>0</span></button>
+                <button data-name-btn="Minus" class="btn-keyboard"><span>_</span><span>-</span></button>
+                <button data-name-btn="Equal" class="btn-keyboard"><span>+</span><span>=</span></button>
+                <button data-name-btn="Backspace" class="btn-keyboard Backspace">Backspace</button>
+            </div>
+            <div class="row">
+                <button data-name-btn="Tab" class="btn-keyboard tab">Tab</button>
+                <button data-name-btn="KeyQ" class="btn-keyboard">Q</button>
+                <button data-name-btn="KeyW" class="btn-keyboard">W</button>
+                <button data-name-btn="KeyE" class="btn-keyboard">E</button>
+                <button data-name-btn="KeyR" class="btn-keyboard">R</button>
+                <button data-name-btn="KeyT" class="btn-keyboard">T</button>
+                <button data-name-btn="KeyY" class="btn-keyboard">Y</button>
+                <button data-name-btn="KeyU" class="btn-keyboard">U</button>
+                <button data-name-btn="KeyI" class="btn-keyboard">I</button>
+                <button data-name-btn="KeyO" class="btn-keyboard">O</button>
+                <button data-name-btn="KeyP" class="btn-keyboard">P</button>
+                <button data-name-btn="BracketLeft" class="btn-keyboard"><span>{</span><span>[</span></button>
+                <button data-name-btn="BracketRight" class="btn-keyboard"><span>}</span><span>]</span></button>
+                <button data-name-btn="Backslash" class="btn-keyboard"><span>|</span><span>\</span></button>
+            </div>
+            <div class="row">
+                <button data-name-btn="CapsLock" class="btn-keyboard caps-lock">Caps Lock</button>
+                <button data-name-btn="KeyA" class="btn-keyboard">A</button>
+                <button data-name-btn="KeyS" class="btn-keyboard">S</button>
+                <button data-name-btn="KeyD" class="btn-keyboard">D</button>
+                <button data-name-btn="KeyF" class="btn-keyboard">F</button>
+                <button data-name-btn="KeyG" class="btn-keyboard">G</button>
+                <button data-name-btn="KeyH" class="btn-keyboard">H</button>
+                <button data-name-btn="KeyJ" class="btn-keyboard">J</button>
+                <button data-name-btn="KeyK" class="btn-keyboard">K</button>
+                <button data-name-btn="KeyL" class="btn-keyboard">L</button>
+                <button data-name-btn="Semicolon" class="btn-keyboard"><span>:</span><span>;</span></button>
+                <button data-name-btn="Quote" class="btn-keyboard"><span>"</span><span>'</span></button>
+                <button data-name-btn="Enter" class="btn-keyboard Enter">Enter</button>
+            </div>
+            <div class="row">
+                <button data-name-btn="ShiftLeft" class="btn-keyboard Shift-left">Shift</button>
+                <button data-name-btn="KeyZ" class="btn-keyboard">Z</button>
+                <button data-name-btn="KeyX" class="btn-keyboard">X</button>
+                <button data-name-btn="KeyC" class="btn-keyboard">C</button>
+                <button data-name-btn="KeyV" class="btn-keyboard">V</button>
+                <button data-name-btn="KeyB" class="btn-keyboard">B</button>
+                <button data-name-btn="KeyN" class="btn-keyboard">N</button>
+                <button data-name-btn="KeyM" class="btn-keyboard">M</button>
+                <button data-name-btn="Comma" class="btn-keyboard"><span><</span><span>,</span></button>
+                <button data-name-btn="Period" class="btn-keyboard"><span>></span><span>.</span></button>
+                <button data-name-btn="Slash" class="btn-keyboard"><span>?</span><span>/</span></button>
+                <button data-name-btn="ShiftRight" class="btn-keyboard Shift-right">Shift</button>
+            </div>
+            <div class="row">
+                <button data-name-btn="ControlLeft" class="btn-keyboard">Ctrl</button>
+                <button data-name-btn="" class="btn-keyboard">Fn</button>
+                <button data-name-btn="MetaLeft" class="btn-keyboard"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                    <path d="M19.852 7.761l-15 2.25C4.362 10.085 4 10.505 4 11v12c0 .553.448 1 1 1h15c.552 0 1-.447 1-1V8.75c0-.291-.127-.567-.348-.758C20.432 7.803 20.139 7.721 19.852 7.761zM45.652 4.242c-.22-.189-.512-.271-.801-.231l-21 3.15C23.362 7.235 23 7.655 23 8.15V23c0 .553.448 1 1 1h21c.552 0 1-.447 1-1V5C46 4.709 45.873 4.433 45.652 4.242zM20 26H5c-.552 0-1 .447-1 1v12c0 .495.362.915.852.989l15 2.25c.05.007.099.011.148.011.238 0 .47-.085.652-.242C20.873 41.817 21 41.541 21 41.25V27C21 26.447 20.552 26 20 26zM45 26H24c-.552 0-1 .447-1 1v14.85c0 .495.362.915.852.989l21 3.15C44.901 45.996 44.951 46 45 46c.238 0 .47-.085.652-.242C45.873 45.567 46 45.291 46 45V27C46 26.447 45.552 26 45 26z"></path>
+                    </svg>
+                  </button>
+                <button data-name-btn="AltLeft" class="btn-keyboard">Alt</button>
+                <button data-name-btn="Space" class="btn-keyboard Space"></button>
+                <button data-name-btn="AltRight" class="btn-keyboard">Alt</button>
+                <button data-name-btn="ControlRight" class="btn-keyboard">Ctrl</button>
+                <div class="Arrow">
+                    <button data-name-btn="PageUp" class="btn-keyboard Pg">Pg Up</button>
+                    <button data-name-btn="ArrowLeft" class="btn-keyboard direction">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                      </button>
+                </div>
+                <div class="Arrow">
+                    <button data-name-btn="ArrowUp" class="btn-keyboard direction">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                          </svg>
+                          
+                    </button>
+                    <button data-name-btn="ArrowDown" class="btn-keyboard direction">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                          </svg>
+                          
+                    </button>
+                </div>
+                <div class="Arrow">
+                    <button data-name-btn="PageDown" class="btn-keyboard Pg">Pg Dn</button>
+                    <button data-name-btn="ArrowRight" class="btn-keyboard direction">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                          </svg>
+                          
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
